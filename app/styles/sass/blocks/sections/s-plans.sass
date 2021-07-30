@@ -1,0 +1,90 @@
+.s-plans
+  margin-bottom: 122px
+
+  &_title
+    text-align: center
+
+    .h2
+      margin-bottom: 19px
+
+    &-desc
+      width: 40%
+      color: #3A3A44
+      margin: 0 auto 43px
+
+  &_table
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    gap: 31px
+    margin: 0 10% 38px
+
+    &-column
+      text-align: center
+
+      &-option
+        height: 50px
+        background: linear-gradient(to right, #F5F5F5, #F7F7F7)
+        color: #3A3A44
+        text-align: left
+        padding: 11px 29px
+
+        &:nth-child(2n)
+          background: #ffffff
+
+      &-item
+        height: 50px
+        background: linear-gradient(to right, #F5F5F5, #F7F7F7)
+        text-align: center
+        padding-top: 10px
+
+        &:nth-child(2n)
+          background: #ffffff
+
+      &-pack
+        color: #3A3A44
+        margin: 0
+
+      span
+        font-family: rubik-oh7, sans-serif
+        font-size: 50px
+        line-height: 60px
+        letter-spacing: .4px
+        text-transform: uppercase
+        background: linear-gradient(to right, #EC6F66, #F3A183)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        position: relative
+
+        &.not-usd
+          &::after
+            content: ''
+
+        &::after
+          position: absolute
+          content: url("../images/src/usd.svg")
+          width: 34px
+          height: 30px
+          top: -40%
+          right: -27%
+
+      &-desc
+        font-size: 14px
+        line-height: 24px
+        color: #3A3A44
+        margin: 20px auto 0
+        width: 250px
+
+      &-button
+        height: 60px
+        width: 100%
+        background: linear-gradient(to right, #EC6F66, #F3A183)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        border-image: linear-gradient(135deg, #EC6F66, #F3A183) 1
+        border-radius: 5px
+
+        &:hover
+          border-image: linear-gradient(135deg, #e73223, #f86024) 1
+          background: linear-gradient(to right, #ff1300, #ff4700)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent

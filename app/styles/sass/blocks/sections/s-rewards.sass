@@ -1,0 +1,60 @@
+.s-rewards
+  display: flex
+  grid-template-columns: 1fr 1fr
+  background-color: #e5e5e54a
+  padding-top: 244px
+
+  &_pagination
+    width: 124px
+    height: 19px
+    display: flex
+    justify-content: left
+    top: 66%
+    align-items: center
+
+  &_next
+    width: 20px
+    height: 38px
+    margin-right: 10px
+    margin-left: 0
+
+
+  &_info
+    display: flex
+    align-items: center
+
+    img
+      width: 800px
+
+  &_carousel
+    margin-top: 150px
+    .h2
+      margin: 0 0 25px
+
+    &-item
+      p
+        font-size: 16px
+        width: 471px
+        margin-bottom: 32px
+
+      a
+        font-weight: 500
+        font-size: 18px
+        background: linear-gradient(to right, #EC6F66, #F3A183)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+        &::after
+          content: url("../images/src/learn_more.svg")
+          margin-left: 4px
+
+        &:hover
+          opacity: .8
+          animation: hide 1s infinite
+          @keyframes hide
+            from
+              margin-left: 4px
+            50%
+              margin-left: 6px
+            to
+              margin-left: 4px
