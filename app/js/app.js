@@ -54,15 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ratings.length > 0) {
         initRatings();
     }
-
+    //Основная функция
     function initRatings() {
         let ratingActive, ratingValue;
 
-        for (let index = 0; index < ratings.length; index++) {
-            const rating = ratings[index];
-
-            initRating(rating);
-        }
+        ratings.forEach((el) =>{
+            initRating(el);
+        });
 
         //Инициализируем конкретный рейтинг
         function initRating(rating) {
@@ -93,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let index = 0; index < ratingItems.length; index++) {
                 const ratingItem = ratingItems[index];
 
+
                 ratingItem.addEventListener('mouseenter', function () {
                     //Обновление переменных
                     initRatingVars(rating);
@@ -119,4 +118,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-})
+});
