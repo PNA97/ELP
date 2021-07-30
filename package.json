@@ -1,9 +1,9 @@
 {
-	"name": "optimizedhtml",
-	"version": "5.0.0",
-	"description": "OptimizedHTML 5 - Lightweight Gulp Starter",
+	"name": "ELP",
+	"version": "1.0.0",
+	"description": "Exodus-Landing-Page - самостоятельный проект 3",
 	"main": "index.js",
-	"author": "WebDesign Master",
+	"author": "PNA97",
 	"license": "ISC",
 	"scripts": {
 		"start": "gulp",

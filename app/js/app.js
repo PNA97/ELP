@@ -1,9 +1,4 @@
-// Import jQuery module (npm i jquery)
-// import $ from 'jquery';
 import Swiper from 'swiper/bundle';
-
-// window.jQuery = $
-// window.$ = $
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,31 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
         slidesPerView: 3,
-        slidesPerColumn: 1,        // centerInsufficientSlides: true,
+        slidesPerColumn: 1,
         centeredSlides: true,
-        // loop: true,
-        // centeredSlidesBounds: true,
-
         slideToClickedSlide: true,
-
         keyboard: {
             enabled: true,
             onlyInViewport: true,
             pageUpDown: true,
         },
-
         mousewheel: {
             sensitivity: 1,
         },
-
         spaceBetween: 8,
-
         slideActiveClass: 'active',
-
         speed: 600,
-
 
     });
 
@@ -58,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         slidesPerView: 1,
         loop: true,
-
         keyboard: {
             enabled: true,
             onlyInViewport: true,
@@ -77,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const rating = ratings[index];
             initRating(rating);
         }
-
         //Инициализируем конкретный рейтинг
         function initRating(rating) {
             initRatingVars(rating);
@@ -88,19 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 setRating(rating);
             }
         }
-
         //Инициализация переменных
         function initRatingVars(rating) {
             ratingActive = rating.querySelector('.s-testimonials_rating-active');
             ratingValue = rating.querySelector('.s-testimonials_rating-value');
         }
-
         //Изменяем ширину активных звёзд
         function setRatingActiveWidth(index = ratingValue.innerHTML) {
             const ratingActiveWidth = index / 0.05;
             ratingActive.style.width = `${ratingActiveWidth}%`;
         }
-
         //Возможность указать оценку
         function setRating(rating) {
             const ratingItems = rating.querySelectorAll('.s-testimonials_rating-item');
