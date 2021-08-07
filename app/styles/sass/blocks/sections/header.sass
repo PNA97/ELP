@@ -56,30 +56,6 @@
           width: 73px
           height: 24px
 
-  &_button
-    position: absolute
-    top: 33px
-    right: 60px
-    width: 166px
-    height: 46px
-    background: linear-gradient(to right, #EC6F66, #F3A183)
-    text-align: center
-    border-radius: 5px
-    padding: 12px 0
-
-    &:hover
-      background: linear-gradient(to right, #fa5449, #f87e4f)
-
-    a
-      text-decoration: none
-      font-size: 14px
-      font-weight: 900
-      color: #F7F7FA
-      letter-spacing: 0.1em
-
-      &:hover
-        color: #F7F7FA
-
   &_title
     position: relative
     display: grid
@@ -106,5 +82,122 @@
   &_img
     position: relative
     margin: 0 10% 0 0
+
     img
       width: 100%
+
+.header_button
+  --pathA: polygon(0.75em 0em, 1.5em 0.45em, 1.05em 0.45em, 1.05em 0.9em, 1.5em 0.9em, 1.5em 1em, 0.75em 1em, 0.75em 1em, 0.75em 1em, 0em 1em, 0em 0.9em, 0.45em 0.9em, 0.45em 0.45em, 0em 0.45em)
+  --pathB: polygon(0.75em 0em, 0.975em 0.25em, 0.975em 0.45em, 0.975em 0.65em, 1.125em 0.8em, 1.125em 1em, 0.9em 1em, 0.75em 1em, 0.6em 1em, 0.375em 1em, 0.375em 0.8em, 0.525em 0.65em, 0.525em 0.45em, 0.525em 0.25em)
+  --pathC: polygon(0.75em 0em, 0.975em 0.25em, 0.975em 0.45em, 0.975em 0.65em, 1.125em 0.8em, 1.125em 1em, 0.9em 1em, 0.75em 1.5em, 0.6em 1em, 0.375em 1em, 0.375em 0.8em, 0.525em 0.65em, 0.525em 0.45em, 0.525em 0.25em)
+  background: linear-gradient(to right, #EC6F66, #F3A183)
+  cursor: pointer
+  overflow: hidden
+  padding: 0.8em 1em 0.5em 3em
+  transition: all 0.1s linear
+  -webkit-tap-highlight-color: #0000
+  -webkit-appearance: none
+  appearance: none
+  position: absolute
+  top: 33px
+  right: 60px
+  width: 166px
+  height: 46px
+  text-align: center
+  border-radius: 5px
+  font-size: 14px
+  font-weight: 900
+  color: #F7F7FA
+  letter-spacing: 0.1em
+
+  &:disabled
+    cursor: not-allowed
+
+  &:not(:disabled)
+    &:focus, &:hover
+      background: linear-gradient(to right, #EC6F66, #F3A183)
+
+  &:focus
+    outline: transparent
+
+  &:before, &:after
+    content: ""
+    display: block
+    position: absolute
+
+  &:before
+    background: radial-gradient(0.2em 0.2em at 1.2em 0.4em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 0.6em 0.8em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.2em 0.2em at 0.4em 1.4em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 1em 1.3em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 0.6em 2em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 1.2em 1.9em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.2em 0.2em at 0.9em 2.3em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.2em 0.2em at 0.4em 2.7em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 1.2em 3.1em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.2em 0.2em at 0.6em 3.3em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 1em 3.7em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 0.4em 4em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 1.2em 4.7em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.2em 0.2em at 0.8em 4.4em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 0.3em 4.8em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.2em 0.2em at 1.2em 5.4em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 0.6em 5.8em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.2em 0.2em at 0.4em 6.4em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 1em 6.3em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 0.6em 7em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.1em 0.1em at 1.2em 6.9em, #fff 45%, #fff0 50%) no-repeat, radial-gradient(0.2em 0.2em at 0.9em 7.3em, #fff 45%, #fff0 50%) no-repeat
+    bottom: 0
+    left: 1em
+    width: 1.5em
+    height: 10em
+
+  &:after
+    background: linear-gradient(#fff 67%, #f4b925 67%)
+    clip-path: var(--pathA)
+    top: 1.1em
+    left: 1em
+    width: 1.5em
+    height: 1.5em
+
+.header_button--running:before, .header_button--done:before
+  animation: riseOnce 0.5s 0.3s linear, riseLoop 1s 0.8s linear infinite
+
+.header_button--running:after, .header_button--done:after
+  clip-path: var(--pathC)
+
+.header_button--running:after
+  animation: flyStart 1.3s ease-in-out, fly 2s 1.3s ease-in-out infinite
+
+.header_button--done
+  &:before
+    animation: riseLoop 1s 0.8s linear infinite paused
+
+  &:after
+    animation: flyEnd 0.8s linear forwards
+
+
+/* Animation
+@keyframes riseOnce
+  from
+    transform: translateY(0)
+
+  to
+    transform: translateY(2.5em)
+
+@keyframes riseLoop
+  from
+    transform: translateY(2.5em)
+
+  to
+    transform: translateY(7.5em)
+
+@keyframes flyStart
+  from
+    clip-path: var(--pathA)
+    transform: translateY(0)
+
+  17%
+    clip-path: var(--pathB)
+    transform: translateY(0)
+
+  33%
+    clip-path: var(--pathC)
+    transform: translateY(0)
+
+  to
+    transform: translateY(-10%)
+
+@keyframes fly
+  from, to
+    transform: translateY(-10%)
+
+  50%
+    transform: translateY(3%)
+
+@keyframes flyEnd
+  from
+    transform: translateY(0)
+
+  to
+    transform: translateY(-5em)

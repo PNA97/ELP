@@ -119,3 +119,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+document.addEventListener("DOMContentLoaded",function(){
+    let btn = this.getElementById("download");
+
+    if (btn) {
+        btn.addEventListener("click",function(){
+            let cl = this.classList,
+                r = "header_button--running",
+                d = "header_button--done",
+                dur = 4000;
+
+            if (!cl.contains(r) && !cl.contains(d) && !this.disabled) {
+                cl.add(r);
+                this.disabled = true;
+                this.innerHTML = "Downloading…";
+
+                setTimeout(() => {
+                    cl.remove(r);
+                    cl.add(d);
+                    this.innerHTML = "Done!";
+
+                    setTimeout(() => {
+                        cl.remove(d);
+                        this.disabled = false;
+                        this.innerHTML = "Download";
+                    },1500);
+                },dur);
+            }
+        });
+    }
+});
