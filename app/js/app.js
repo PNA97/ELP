@@ -39,8 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.swiper-pagination',
             clickable: true,
         },
-        slidesPerView: 1,
         loop: true,
+        initialSlide: 0,
+        slidesPerView: 1,
+        // loop: true,
         keyboard: {
             enabled: true,
             onlyInViewport: true,
@@ -54,11 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ratings.length > 0) {
         initRatings();
     }
+
     //Основная функция
     function initRatings() {
         let ratingActive, ratingValue;
 
-        ratings.forEach((el) =>{
+        ratings.forEach((el) => {
             initRating(el);
         });
 
@@ -120,11 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function () {
     let btn = this.getElementById("download");
 
     if (btn) {
-        btn.addEventListener("click",function(){
+        btn.addEventListener("click", function () {
             let cl = this.classList,
                 r = "header_button--running",
                 d = "header_button--done",
@@ -144,8 +147,8 @@ document.addEventListener("DOMContentLoaded",function(){
                         cl.remove(d);
                         this.disabled = false;
                         this.innerHTML = "Download";
-                    },1500);
-                },dur);
+                    }, 1500);
+                }, dur);
             }
         });
     }
